@@ -58,5 +58,3 @@ crashlytics-build.properties
 fabric.properties
 /.idea/workspace.xml
 /yarn.lock
-/.idea/watcherTasks.xml
-/.idea/codeStyleSettings.xml
