@@ -13,6 +13,12 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
+<<<<<<< Updated upstream
+=======
+    "axios": "^0.17.1",
+    "bulma": "^0.6.1",
+    "font-awesome": "^4.7.0",
+>>>>>>> Stashed changes
     "nuxt": "^1.0.0-rc11"
   },
   "devDependencies": {
