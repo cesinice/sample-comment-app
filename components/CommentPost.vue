@@ -50,7 +50,6 @@
     },
     methods: {
       postMessage: function (message) {
-        alert('Username ' + this.username + ' message ' + message)
         if (this.username === '' || message === '') {
           alert('Blank field')
         } else {
