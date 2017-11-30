@@ -51,13 +51,17 @@
     methods: {
       postMessage: function (message) {
         alert('Username ' + this.username + ' message ' + message)
-        axios.post('/comments', {
-          author: this.username,
-          comment: this.commentMessage
-        })
-          .catch(function (error) {
-            console.log(error)
+        if (this.username === '' || message === '') {
+          alert('Blank field')
+        } else {
+          axios.post('/comments', {
+            author: this.username,
+            comment: this.commentMessage
           })
+            .catch(function (error) {
+              console.log(error)
+            })
+        }
         this.cancel()
       },
       cancel: function () {
