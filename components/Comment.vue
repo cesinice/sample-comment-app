@@ -5,19 +5,14 @@
         <div class="media-content">
           <div class="content">
             <p>
-              <strong>{{ author }}</strong>
+              <strong>{{ comment.author }}</strong>
               <br>
-              <textarea class="textarea">{{ comment }}</textarea>
+              <textarea class="textarea">{{ comment.comment }}</textarea>
             </p>
           </div>
           <div class="field is-grouped">
             <p class="control">
-              <a class="button is-link is-focused">
-                Edit
-              </a>
-            </p>
-            <p class="control">
-              <a class="button is-danger is-focused">
+              <a v-on:click="this.deleteComment()" class="button is-danger is-focused">
                 Delete
               </a>
             </p>
@@ -29,8 +24,18 @@
 </template>
 
 <script>
+  import axios from 'axios'
+
   export default {
-    components: {
+    data () {
+      return {}
+    },
+    props: ['comment'],
+
+    methods: {
+      deleteComment: function () {
+        axios.delete('/comments/' + this.comment.id)
+      }
     }
   }
 </script>
