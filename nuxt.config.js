@@ -1,5 +1,12 @@
 module.exports = {
   /*
+  ** Include CSS in components
+   */
+  css: [
+    { src: 'bulma/bulma.sass', lang: 'sass' },
+    { src: 'font-awesome/scss/font-awesome.scss', lang: 'scss' },
+  ],
+  /*
   ** Headers of the page
   */
   head: {
